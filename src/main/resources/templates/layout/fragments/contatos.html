@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact" th:fragment="contatos">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2 th:text="#{label.contato}">Contact</h2>
+                </div>
+
+                <div class="row mt-1">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4 th:text="|#{label.localizacao}:|">Location:</h4>
+                                <p th:text="#{endereco.fixo}">Rio de Janeiro, New York, NY 535022</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4 th:text="|#{label.email}:|">Email:</h4>
+                                <p th:text="#{email.fixo}">info@example.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4 th:text="|#{label.telefone}:|">Call:</h4>
+                                <p th:text="#{telefone.fixo}">+1 5589 55488 55s</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form method="post" role="form" class="php-email-form" th:object="${mensagem}" th:action="@{/mail/send}">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" th:field="*{nome}" class="form-control" id="name" th:placeholder="#{label.seu.nome}" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" th:field="*{email}" id="email" th:placeholder="#{label.seu.email}" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" th:field="*{assunto}" id="subject" th:placeholder="#{label.assunto}" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" th:field="*{mensagem}" rows="5" th:placeholder="#{label.mensagem}" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading" th:placeholder="#{label.processando}">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message" th:text="#{texto.sua.mensagem.foi.enviada}">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit" th:text="#{label.enviar.mensagem}">Send Message</button></div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+        </nav>
+    </body>
+</html>
