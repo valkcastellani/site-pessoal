@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- ======= Resume Section ======= -->
+        <section id="resume" class="resume" th:fragment="curriculo">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2 th:text="#{label.curriculo}">Resume</h2>
+                    <p th:text="#{texto.curriculo.inicial}"></p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 class="resume-title" th:text="#{label.sumario}">Sumary</h3>
+                        <div class="resume-item pb-0">
+                            <h4>Valk Castellani</h4>
+                            <p><em th:text="#{texto.curriculo}"></em></p>
+                            <ul>
+                                <li th:text="#{cidade.fixo}"></li>
+                                <li th:text="#{telefone.fixo}"></li>
+                                <li th:text="#{email.fixo}"></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title" th:text="#{label.educacao}">Education</h3>
+                        <div class="resume-item">
+                            <h4 th:text="#{label.mestrado.informatica}"></h4>
+                            <h5>2010 - 2012</h5>
+                            <p><em th:text="#{label.ufrj}"></em></p>
+                            <p th:text="#{texto.mestrado}"></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4 th:text="#{label.especialista.engenharia}"></h4>
+                            <h5>2001 - 2002</h5>
+                            <p><em th:text="#{label.unesa}"></em></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4 th:text="#{label.especialista.banco.dados}"></h4>
+                            <h5>2000 - 2001</h5>
+                            <p><em th:text="#{label.unesa}"></em></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4 th:text="#{label.graduacao.informatica}"></h4>
+                            <h5>1995 - 1998</h5>
+                            <p><em th:text="#{label.faa}"></em></p>
+                            <p th:text="#{texto.graduacao}"></p>
+                        </div>
+
+                        <h3 class="resume-title" th:text="#{label.experiencia.academica}">Professional Experience</h3>
+                        <div class="resume-item">
+                            <h4><span class="cargos-aedb" data:typed-items="|#{label.professor}|"></span></h4>
+                            <h5>2013 - 2016</h5>
+                            <p><em th:text="#{aedb.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{aedb.texto}"></li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4><span class="cargos-fasf" data:typed-items="|#{label.professor}|"></span></h4>
+                            <h5>2003 - 2003</h5>
+                            <p><em th:text="#{fasf.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{fasf.texto}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="resume-title" th:text="#{label.experiencia.profissional}">Professional Experience</h3>
+                        <div class="resume-item">
+                            <h4><span class="cargos-cepel" data:typed-items="|#{label.pesquisador}, #{label.analista.sistemas}, #{label.gerente.projetos}, #{label.desenvolvedor.desktop}, #{label.desenvolvedor.web}|"></span></h4>
+                            <h5>2001 - Present</h5>
+                            <p><em th:text="#{cepel.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{cepel.encad}"></li>
+                                <li th:text="#{cepel.anafin}"></li>
+                                <li th:text="#{cepel.anatipo}"></li>
+                                <li th:text="#{cepel.prevmel}"></li>
+                                <li th:text="#{cepel.tardist}"></li>
+                                <li th:text="#{cepel.anabench}"></li>
+                                <li th:text="#{cepel.prevmd}"></li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4><span class="cargos-pmar" data:typed-items="|#{label.analista.sistemas}, #{label.programador}|"></span></h4>
+                            <h5>2003 - 2005</h5>
+                            <p><em th:text="#{pmar.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{pmar.texto}"></li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4><span class="cargos-hitech" data:typed-items="|#{label.analista.sistemas}, #{label.desenvolvedor.desktop}, #{label.lider.equipe}, #{label.gerente.projetos}|"></span></h4>
+                            <h5>1999 - 2001</h5>
+                            <p><em th:text="#{hitech.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{hitech.texto}"></li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4><span class="cargos-g9" data:typed-items="|#{label.analista.sistemas}, #{label.desenvolvedor.desktop}, #{label.gerente.projetos}|"></span></h4>
+                            <h5>1997 - 1999</h5>
+                            <p><em th:text="#{g9.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{g9.texto}"></li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4><span class="cargos-epdvr" data:typed-items="|#{label.programador}, #{label.tecnico.sistemas}|"></span></h4>
+                            <h5>1993 - 1996</h5>
+                            <p><em th:text="#{epdvr.fixo}"></em></p>
+                            <ul>
+                                <li th:text="#{epdvr.texto}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Resume Section -->
+    </body>
+</html>

@@ -1,8 +1,8 @@
 package com.valkcastellani.site.rest.mail.service;
 
+import jakarta.mail.MessagingException;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import javax.mail.MessagingException;
 import org.springframework.mail.MailException;
 
 /**
