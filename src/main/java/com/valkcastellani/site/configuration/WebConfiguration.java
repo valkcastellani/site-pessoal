@@ -22,13 +22,9 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
  */
 @ComponentScan(basePackageClasses = {HomeController.class, MailController.class})
 @Configuration
-//@EnableCaching
-//@EnableAsync
 public class WebConfiguration implements WebMvcConfigurer {
 
     private ApplicationContext applicationContext;
-//    @Autowired
-//    private RoleCheckInterceptor roleCheckInterceptor;
 
     @Bean
     public LocaleResolver localeResolver() {
@@ -44,18 +40,11 @@ public class WebConfiguration implements WebMvcConfigurer {
         return lci;
     }
 
-//    @Bean
-//    public CacheManager cacheManager() throws Exception {
-//        return new JCacheCacheManager(Caching.getCachingProvider().getCacheManager(
-//                getClass().getResource("/env/ehcache.xml").toURI(),
-//                getClass().getClassLoader()));
-//    }
-
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
 //        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/", "classpath:/cepel/");
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/", "classpath:/myresume/", "classpath:/templates/", "classpath:/templates/layout/");
     }
 
     @Override
