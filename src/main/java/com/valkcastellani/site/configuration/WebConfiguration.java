@@ -44,7 +44,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
 //        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/", "classpath:/myresume/", "classpath:/templates/", "classpath:/templates/layout/");
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/templates/");
     }
 
     @Override
